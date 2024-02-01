@@ -87,7 +87,7 @@ Search by title
 Python: Flask RestAPI
 AirBnB API
 Tasks
-0. Restart from scratch!
+## 0. Restart from scratch!
 mandatory
 No no no! We are already too far in the project to restart everything.
 
@@ -105,7 +105,7 @@ Repo:
 
 GitHub repository: AirBnB_clone_v3
  
-1. Never fail!
+## 1. Never fail!
 mandatory
 
 
@@ -128,7 +128,7 @@ Repo:
 
 GitHub repository: AirBnB_clone_v3
   
-2. Improve storage
+## 2. Improve storage
 mandatory
 Update DBStorage and FileStorage, adding two new methods. All changes should be done in the branch storage_get_count:
 
@@ -176,7 +176,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: models/engine/db_storage.py, models/engine/file_storage.py, tests/test_models/test_engine/test_db_storage.py, tests/test_models/test_engine/test_file_storage.py
   
-3. Status of your API
+## 3. Status of your API
 mandatory
 It’s time to start your API!
 
@@ -225,7 +225,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/__init__.py, api/v1/__init__.py, api/v1/views/__init__.py, api/v1/views/index.py, api/v1/app.py
   
-4. Some stats?
+## 4. Some stats?
 mandatory
 Create an endpoint that retrieves the number of each objects by type:
 
@@ -249,7 +249,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/views/index.py
   
-5. Not found
+## 5. Not found
 mandatory
 Designers are really creative when they have to design a “404 page”, a “Not found”… 34 brilliantly designed 404 error pages
 
@@ -286,7 +286,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/app.py
   
-6. State
+## 6. State
 mandatory
 Create a new view for State objects that handles all default RESTFul API actions:
 
@@ -403,7 +403,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/views/states.py, api/v1/views/__init__.py
   
-7. City
+## 7. City
 mandatory
 Same as State, create a new view for City objects that handles all default RESTFul API actions:
 
@@ -541,7 +541,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/views/cities.py, api/v1/views/__init__.py
   
-8. Amenity
+## 8. Amenity
 mandatory
 Create a new view for Amenity objects that handles all default RESTFul API actions:
 
@@ -576,7 +576,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/views/amenities.py, api/v1/views/__init__.py
   
-9. User
+## 9. User
 mandatory
 Create a new view for User object that handles all default RESTFul API actions:
 
@@ -612,7 +612,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/views/users.py, api/v1/views/__init__.py
   
-10. Place
+## 10. Place
 mandatory
 Create a new view for Place objects that handles all default RESTFul API actions:
 
@@ -651,7 +651,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/views/places.py, api/v1/views/__init__.py
   
-11. Reviews
+## 11. Reviews
 mandatory
 Create a new view for Review object that handles all default RESTFul API actions:
 
@@ -690,7 +690,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/views/places_reviews.py, api/v1/views/__init__.py
   
-12. HTTP access control (CORS)
+## 12. HTTP access control (CORS)
 mandatory
 A resource makes a cross-origin HTTP request when it requests a resource from a different domain, or port, than the one the first resource itself serves.
 
@@ -743,7 +743,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/app.py
   
-13. Place - Amenity
+## 13. Place - Amenity
 #advanced
 Create a new view for the link between Place objects and Amenity objects that handles all default RESTFul API actions:
 
@@ -774,7 +774,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: api/v1/views/places_amenities.py, api/v1/views/__init__.py
   
-14. Security improvements!
+## 14. Security improvements!
 #advanced
 Currently, the User object is designed to store the user password in cleartext.
 
@@ -791,7 +791,7 @@ Repo:
 GitHub repository: AirBnB_clone_v3
 File: models/base_model.py, models/user.py
   
-15. Search
+## 15. Search
 #advanced
 For the moment, the only way to list Place objects is via GET /api/v1/cities/<city_id>/places.
 
