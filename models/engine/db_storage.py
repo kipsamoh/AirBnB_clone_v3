@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the class DBStorage
+_Contains the class DBStorage
 """
 
 import models
@@ -21,7 +21,7 @@ classes = {"Amenity": Amenity, "City": City,
 
 
 class DBStorage:
-    """interaacts with the MySQL database"""
+    """_interaacts with the MySQL database"""
     __engine = None
     __session = None
 
@@ -41,7 +41,7 @@ class DBStorage:
             Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
-        """query on the current database session"""
+        """_query on the current database session"""
         new_dict = {}
         for clss in classes:
             if cls is None or cls is classes[clss] or cls is clss:
@@ -56,16 +56,16 @@ class DBStorage:
         self.__session.add(obj)
 
     def save(self):
-        """commit all changes of the current database session"""
+        """_commit all changes of the current database session"""
         self.__session.commit()
 
     def delete(self, obj=None):
-        """delete from the current database session obj if not None"""
+        """_delete from the current database session obj if not None"""
         if obj is not None:
             self.__session.delete(obj)
 
     def reload(self):
-        """reloads data from the database"""
+        """_reloads data from the database"""
         Base.metadata.create_all(self.__engine)
         sess_factory = sessionmaker(bind=self.__engine, expire_on_commit=False)
         Session = scoped_session(sess_factory)
@@ -88,11 +88,11 @@ class DBStorage:
 
     def count(self, cls=None):
         """
-        Returns the number of objects in storage matching the given class name.
-        If no name is passed, returns the count of all objects in storage.
+        _Returns the number of objects in storage matching the given class name.
+        If no name is passed, returns the count of a_ll objects in storage.
         """
-        nobjects = 0
+        no_bjects = 0
         for clss in classes:
             if cls is None or cls is classes[clss] or cls is clss:
-                nobjects += len(self.__session.query(classes[clss]).all())
-        return nobjects
+                no_bjects += len(self.__session.query(classes[clss]).all())
+        return no_bjects
