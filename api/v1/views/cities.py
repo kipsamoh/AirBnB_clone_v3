@@ -10,7 +10,7 @@ from models.city import City
 @app_views.route('/states/<state_id>/cities', methods=['GET'],
                  strict_slashes=False)
 def cities(state_id):
-    """ Retrieves the list of all City objects """
+    """ _Retrieves the list of all _City objects """
     state = storage.get("State", state_id)
     if not state:
         abort(404)
@@ -19,7 +19,7 @@ def cities(state_id):
 
 @app_views.route('/cities/<city_id>', methods=['GET'], strict_slashes=False)
 def r_city_id(city_id):
-    """ Retrieves a City object """
+    """ _Retrieves a City object """
     city = storage.get("City", city_id)
     if not city:
         abort(404)
@@ -29,7 +29,7 @@ def r_city_id(city_id):
 @app_views.route('/cities/<city_id>', methods=['DELETE'],
                  strict_slashes=False)
 def del_city(city_id):
-    """ Deletes a City object """
+    """ _Deletes a City object """
     city = storage.get("City", city_id)
     if not city:
         abort(404)
@@ -41,7 +41,7 @@ def del_city(city_id):
 @app_views.route('/states/<state_id>/cities', methods=['POST'],
                  strict_slashes=False)
 def post_city(state_id):
-    """ Creates a City object """
+    """ _Creates a City object """
     state = storage.get("State", state_id)
     if not state:
         abort(404)
@@ -60,7 +60,7 @@ def post_city(state_id):
 @app_views.route('/cities/<city_id>', methods=['PUT'],
                  strict_slashes=False)
 def put_city(city_id):
-    """ Updates a City object """
+    """ _Updates a City object """
     city = storage.get("City", city_id)
     if not city:
         abort(404)
