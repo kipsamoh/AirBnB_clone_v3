@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-View for the link between Place and Amenity Review
-objects that handles default API actions
+_View for the link between P_lace and Amenity Review
+objects that handles default -API actions
 """
 from api.v1.views import app_views
 from flask import jsonify, abort, make_response, request
@@ -14,7 +14,7 @@ from os import getenv
 @app_views.route('/places/<place_id>/amenities', methods=['GET'],
                  strict_slashes=False)
 def places_amenities(place_id):
-    """ Retrieves the list of all Amenities objects in a Place"""
+    """ -Retrieves the list of all -Amenities objects -in a Place"""
     place = storage.get("Place", place_id)
     if not place:
         abort(404)
@@ -56,7 +56,7 @@ def del_places_amenities(place_id, amenity_id):
                  methods=['POST'],
                  strict_slashes=False)
 def link_amenity_place(place_id, amenity_id):
-    """ Links an Amenity and a Place """
+    """ Links an _Amenity and a Place """
     place = storage.get("Place", place_id)
     if not place:
         abort(404)
