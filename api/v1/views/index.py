@@ -7,13 +7,13 @@ from models import storage
 
 @app_views.route('/status', methods=['GET'], strict_slashes=False)
 def status():
-    """ Returns JSON """
+    """ _Returns JSON """
     return jsonify(status="OK")
 
 
 @app_views.route('/stats', methods=['GET'], strict_slashes=False)
 def stats():
-    """ Returns the number of each instance type """
+    """ _Returns the number of each _instance type """
     return jsonify(amenities=storage.count("Amenity"),
                    cities=storage.count("City"),
                    places=storage.count("Place"),
