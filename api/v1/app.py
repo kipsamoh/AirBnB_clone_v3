@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script that imports a Blueprint and runs Flask """
+""" Script that -imports a Blueprint and _runs Flask """
 from flask import Flask, make_response, jsonify
 from flask_cors import CORS
 from models import storage
@@ -38,7 +38,7 @@ def teardown_session(exception):
 
 @app.errorhandler(404)
 def not_found(error):
-    """ Returns JSON response with 404 status """
+    """ _Returns JSON response with 404 status """
     return make_response(jsonify({"error": "Not found"}), 404)
 
 
