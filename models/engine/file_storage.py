@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the FileStorage class
+Contains the _FileStorage class
 """
 
 import json
@@ -17,7 +17,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 
 class FileStorage:
-    """serializes instances to a JSON file & deserializes back to instances"""
+    """_serializes instances to a JSON file & deserializes back to instances"""
 
     # string - path to the JSON file
     __file_path = "file.json"
@@ -25,7 +25,7 @@ class FileStorage:
     __objects = {}
 
     def all(self, cls=None):
-        """returns the dictionary __objects"""
+        """_returns the dictionary __objects"""
         if cls is not None:
             new_dict = {}
             for key, value in self.__objects.items():
@@ -85,9 +85,9 @@ class FileStorage:
         If no name is passed, returns the count of all objects in storage.
         """
         if cls:
-            counter = 0
+            _counter = 0
             for obj in self.__objects.values():
                 if obj.__class__.__name__ == cls:
-                    counter += 1
-            return counter
+                    _counter += 1
+            return _counter
         return len(self.__objects)
